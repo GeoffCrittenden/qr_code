@@ -8,7 +8,7 @@
   width: 438px;
 }
 
-h1, #get_code {
+h1, #get_code, #mouse {
   margin: 20px;
   text-align: center;
 }
@@ -16,10 +16,11 @@ h1, #get_code {
 .top {
   border: 5px solid #27466E;
   border-radius: 20px;
-  margin: 0 auto;
+  height: 120px;
+  margin: 20px auto;
   width: 370px;
 }
 
 #qr {
-  margin: 80px 45px 120px 45px;
+  margin: 60px 45px 140px 45px;
 }
