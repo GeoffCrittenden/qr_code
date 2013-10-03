@@ -6,7 +6,7 @@ $(document).ready(function() {
     var url = $(this).attr('action');
     var data = $(this).serialize();
     $.post(url, data, function(response) {
-      $('.container').append(response);
+      $('.qr').append(response);
     });
   });
 

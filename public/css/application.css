@@ -1,9 +1,25 @@
 .container {
+  background-color: #D3DEED;
+  border: 1px solid #27466E;
+  color: #27466E;
+  height: 648px;
   margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  padding: 20px;
+  width: 438px;
 }
-th {
-  text-align: left;
+
+h1, #get_code {
+  margin: 20px;
+  text-align: center;
+}
+
+.top {
+  border: 5px solid #27466E;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 370px;
+}
+
+#qr {
+  margin: 80px 45px 120px 45px;
 }
