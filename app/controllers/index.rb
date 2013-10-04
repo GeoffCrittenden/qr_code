@@ -1,6 +1,24 @@
+#---------- GET ------------------
+
 get '/' do
-  # Look in app/views/index.erb
   erb :index
+end
+
+get '/restaurant' do
+  erb :restaurant
+end
+
+get '/order/:id' do
+  @order = Order.find(params[:id])
+  erb :order
+end
+
+#---------- POST -----------------
+
+post '/order' do
+  order = Order.create
+  order.update_attributes(restaurant_id: Restaurant.find_by_name(params[:restaurant]).id)
+  redirect "/order/#{order.id}"
 end
 
 post '/qr_code' do
