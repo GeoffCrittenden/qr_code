@@ -5,7 +5,8 @@
     <% if @restaurant.name == "Chipotle" %>
       <form class='order_form' id='chipotle_form' action='/generate' method='POST'>
         <input type='hidden' name='order[id]' value='<%= @order.id %>'/>
-        <label>Food Type: <select class='pulldown' autofocus name='order[type]'>
+        <label>Name: <input type='text' id='name' autofocus name='order[name]' placeholder='enter your first name'></label><br>
+        <label>Food Type: <select class='pulldown' name='order[type]'>
           <option value='' selected disabled></option>
           <option value="<%= @restaurant.items[0].id %>"><%= @restaurant.items[0].name.capitalize %></option>
           <option value="<%= @restaurant.items[1].id %>"><%= @restaurant.items[1].name.capitalize %></option>
@@ -32,19 +33,19 @@
           <option value="<%= @restaurant.items[12].id %>"><%= @restaurant.items[12].name.capitalize %></option>
         </select></label><br>
         <div id='toppings'><label>Toppings:</label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[13].id %>"> <%= @restaurant.items[13].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[14].id %>"> <%= @restaurant.items[14].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[15].id %>"> <%= @restaurant.items[15].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[16].id %>"> <%= @restaurant.items[16].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[17].id %>"> <%= @restaurant.items[17].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[18].id %>"> <%= @restaurant.items[18].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[19].id %>"> <%= @restaurant.items[19].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[20].id %>"> <%= @restaurant.items[20].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[toppings]' value="<%= @restaurant.items[21].id %>"> <%= @restaurant.items[21].name.capitalize %></label></div><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_1]' value="<%= @restaurant.items[13].id %>"> <%= @restaurant.items[13].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_2]' value="<%= @restaurant.items[14].id %>"> <%= @restaurant.items[14].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_3]' value="<%= @restaurant.items[15].id %>"> <%= @restaurant.items[15].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_4]' value="<%= @restaurant.items[16].id %>"> <%= @restaurant.items[16].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_5]' value="<%= @restaurant.items[17].id %>"> <%= @restaurant.items[17].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_6]' value="<%= @restaurant.items[18].id %>"> <%= @restaurant.items[18].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_7]' value="<%= @restaurant.items[19].id %>"> <%= @restaurant.items[19].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_8]' value="<%= @restaurant.items[20].id %>"> <%= @restaurant.items[20].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[toppings_9]' value="<%= @restaurant.items[21].id %>"> <%= @restaurant.items[21].name.capitalize %></label></div><br>
         <div id='toppings'><label>Extras:</label><br>
-          <label><input type='checkbox' class='checkbox' name='order[extras]' value="<%= @restaurant.items[22].id %>"> <%= @restaurant.items[22].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[extras]' value="<%= @restaurant.items[23].id %>"> <%= @restaurant.items[23].name.capitalize %></label><br>
-          <label><input type='checkbox' class='checkbox' name='order[extras]' value="<%= @restaurant.items[24].id %>"> <%= @restaurant.items[24].name.capitalize %></label>
+          <label><input type='checkbox' class='checkbox' name='order[extras_1]' value="<%= @restaurant.items[22].id %>"> <%= @restaurant.items[22].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[extras_2]' value="<%= @restaurant.items[23].id %>"> <%= @restaurant.items[23].name.capitalize %></label><br>
+          <label><input type='checkbox' class='checkbox' name='order[extras_3]' value="<%= @restaurant.items[24].id %>"> <%= @restaurant.items[24].name.capitalize %></label>
         </div><br>
         <input type='submit' value='Submit Your Order'>
       </form>

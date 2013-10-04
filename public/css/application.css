@@ -9,7 +9,7 @@
   width: 438px;
 }
 
-h1, form, #mouse {
+h1, form, #mouse, #hold_up {
   margin: 20px;
   text-align: center;
 }
@@ -28,18 +28,18 @@ h1 {
   width: 370px;
 }
 
-.pulldown {
-  margin-bottom: 20px;
+.pulldown, #name {
+  margin-bottom: 10px;
 }
 
 #toppings, #extras {
   margin-bottom: 10px;
-  margin-left: 130px;
+  margin-left: 80px;
   text-align: left;
 }
 
 #qr {
-  margin: 60px 45px 60px 45px;
+  margin: 30px 45px 60px 45px;
 }
 
 .link {

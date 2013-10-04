@@ -38,9 +38,11 @@ post '/order' do
 end
 
 post '/generate' do
+  user = User.find_or_create_by_name(params[:order][:name])
   @order = Order.find(params[:order][:id])
+  @order.user_id = user.id
   params[:order].each_pair { |key,item| 
-    if key == "id"
+    if key == "id" || key == "name"
       next
     else
       @order.items << Item.find(item)
@@ -48,7 +50,7 @@ post '/generate' do
   }
   order_ary = []
   @order.items.each { |item| order_ary << item.name }
-  order_string = "#{Restaurant.find(@order.restaurant_id).name}," + order_ary.join(',')
+  order_string = "#{Restaurant.find(@order.restaurant_id).name},#{@order.id},#{User.find(@order.user_id).name}," + order_ary.join(',')
   puts order_ary
   puts order_string
   redirect "/code/#{order_string}"
