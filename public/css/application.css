@@ -4,6 +4,7 @@
   color: #27466E;
   height: 648px;
   margin: 20px auto;
+  margin-top: 0;
   padding: 20px;
   width: 438px;
 }
@@ -22,11 +23,25 @@ h1 {
 .top {
   border: 5px solid #27466E;
   border-radius: 20px;
-  height: 120px;
+  height: auto;
   margin: 20px auto;
   width: 370px;
 }
 
+.pulldown {
+  margin-bottom: 20px;
+}
+
+#toppings, #extras {
+  margin-bottom: 10px;
+  margin-left: 130px;
+  text-align: left;
+}
+
 #qr {
-  margin: 60px 45px 140px 45px;
+  margin: 60px 45px 60px 45px;
+}
+
+.link {
+text-align: center;
 }

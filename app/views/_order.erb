@@ -1,0 +1,51 @@
+<div class='top'>
+  <h1>Make your order:</h1>
+  <% if @restaurant.name == "Chipotle" %>
+    <form class='order_form' id='chipotle_form' action='/generate' method='POST'>
+      <input type='hidden' name='order[id]' value='<%= @order.id %>'/>
+      <select class='pulldown' autofocus name='order[type]'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[0].id %>"><%= @restaurant.items[0].name.capitalize %></option>
+        <option value="<%= @restaurant.items[1].id %>"><%= @restaurant.items[1].name.capitalize %></option>
+        <option value="<%= @restaurant.items[2].id %>"><%= @restaurant.items[2].name.capitalize %></option>
+        <option value="<%= @restaurant.items[3].id %>"><%= @restaurant.items[3].name.capitalize %></option>
+      </select><br>
+      <select class='pulldown' name='order[meat]'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[4].id %>"><%= @restaurant.items[4].name.capitalize %></option>
+        <option value="<%= @restaurant.items[5].id %>"><%= @restaurant.items[5].name.capitalize %></option>
+        <option value="<%= @restaurant.items[6].id %>"><%= @restaurant.items[6].name.capitalize %></option>
+        <option value="<%= @restaurant.items[7].id %>"><%= @restaurant.items[7].name.capitalize %></option>
+        <option value="<%= @restaurant.items[8].id %>"><%= @restaurant.items[8].name.capitalize %></option>
+      </select><br>
+      <select class='pulldown' name='order[rice]'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[9].id %>"><%= @restaurant.items[9].name.capitalize %></option>
+        <option value="<%= @restaurant.items[10].id %>"><%= @restaurant.items[10].name.capitalize %></option>
+      </select><br>
+      <select class='pulldown' name='order[beans]'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[11].id %>"><%= @restaurant.items[11].name.capitalize %></option>
+        <option value="<%= @restaurant.items[12].id %>"><%= @restaurant.items[12].name.capitalize %></option>
+      </select><br>
+      <select class='pulldown' name='order[toppings]'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[13].id %>"><%= @restaurant.items[13].name.capitalize %></option>
+        <option value="<%= @restaurant.items[14].id %>"><%= @restaurant.items[14].name.capitalize %></option>
+        <option value="<%= @restaurant.items[15].id %>"><%= @restaurant.items[15].name.capitalize %></option>
+        <option value="<%= @restaurant.items[16].id %>"><%= @restaurant.items[16].name.capitalize %></option>
+        <option value="<%= @restaurant.items[17].id %>"><%= @restaurant.items[17].name.capitalize %></option>
+        <option value="<%= @restaurant.items[18].id %>"><%= @restaurant.items[18].name.capitalize %></option>
+        <option value="<%= @restaurant.items[19].id %>"><%= @restaurant.items[19].name.capitalize %></option>
+        <option value="<%= @restaurant.items[20].id %>"><%= @restaurant.items[20].name.capitalize %></option>
+        <option value="<%= @restaurant.items[21].id %>"><%= @restaurant.items[21].name.capitalize %></option>
+      </select><br>
+      <select class='pulldown' name='order[extras]' onChange='this.form.submit()'>
+        <option value='' selected disabled>choose:</option>
+        <option value="<%= @restaurant.items[22].id %>"><%= @restaurant.items[22].name.capitalize %></option>
+        <option value="<%= @restaurant.items[23].id %>"><%= @restaurant.items[23].name.capitalize %></option>
+        <option value="<%= @restaurant.items[24].id %>"><%= @restaurant.items[24].name.capitalize %></option>
+      </select><br>
+    </form>
+  <% end %>
+</div>    

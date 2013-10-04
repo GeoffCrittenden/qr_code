@@ -1,13 +1,14 @@
-<div class="container">
+<div class='container'>
+
   <div class='top'>
-    <h1>Create Your Order Code</h1>
-    <p id='mouse'>mouse over here<p>
-    <form id='get_code' action='/qr_code' method='post'>
-      <label>Text: <input type='text' required name='text' placeholder='enter your text here'></label>
-      <!-- <label>Pixels: <input type='text' required name='pixels' placeholder='enter your QR code size here'></label> -->
-      <input type='submit' value='Submit!'>
+    <h1>Choose your restaurant:</h1>
+
+    <form id="restaurant" action='/order' method='POST'>
+      <select id="select" autofocus name='restaurant' onChange='this.form.submit()'>
+        <option value='' selected disabled>choose:</option>
+        <option value='Chipotle'>Chipotle</option>
+      </select>
     </form>
   </div>
-  <div class='qr'></div>
 
 </div>
