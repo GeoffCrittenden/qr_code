@@ -4,6 +4,7 @@
   color: #27466E;
   height: 648px;
   margin: 20px auto;
+  margin-bottom: 0;
   margin-top: 0;
   padding: 20px;
   width: 438px;
@@ -26,6 +27,10 @@ h1 {
   height: auto;
   margin: 20px auto;
   width: 370px;
+}
+
+.order_form label {
+
 }
 
 .pulldown, #name {

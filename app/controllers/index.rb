@@ -53,6 +53,7 @@ post '/generate' do
   order_string = "#{Restaurant.find(@order.restaurant_id).name},#{@order.id},#{User.find(@order.user_id).name}," + order_ary.join(',')
   puts order_ary
   puts order_string
+  puts order_string.length
   redirect "/code/#{order_string}"
 end
 
