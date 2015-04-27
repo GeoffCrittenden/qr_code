@@ -11,6 +11,15 @@ $(document).ready(function() {
     });
   });
 
+  //when ready...
+  window.addEventListener("load", function(){
+    //Set a timeout...
+    setTimeout(function(){
+      //Hide the address bar!
+      window.scrollTo(0, 1);
+    }, 0);
+  });
+
   // $('.top').mouseenter(showOnOver);
 
   // $('.top').mouseleave(hideOnLeave);
